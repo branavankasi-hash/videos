@@ -1,0 +1,33 @@
+name: Find reference photos
+
+on:
+  workflow_dispatch:
+    inputs:
+      query:
+        description: "Commons search terms (separate several searches with |)"
+        default: "Brihadeeswarar Temple Thanjavur vimana|Thanjavur Big Temple tower|Brihadisvara temple courtyard Nandi"
+      tag:
+        description: "Release tag name"
+        default: "refs-temple"
+
+permissions:
+  contents: write
+
+jobs:
+  find:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: |
+          pip install requests
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-dejavu-core
+      - run: python pipeline/find_references.py "${{ inputs.query }}" out/refs
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete "${{ inputs.tag }}" --yes --cleanup-tag 2>/dev/null || true
+          gh release create "${{ inputs.tag }}" out/refs/contact_sheet.jpg out/refs/candidates.json \
+            --title "Reference photos: ${{ inputs.tag }}" --notes "${{ inputs.query }}" --prerelease
