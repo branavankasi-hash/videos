@@ -14,10 +14,10 @@
     "BRONZE_QUEEN": "a slightly smaller antique Chola bronze statue of a standing queen in graceful tribhanga pose with a tall crown, dark green-brown patina"
   },
   "references": {
-    "temple_dawn": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Thanjavur_Brihadeeswarar_Temple.jpg/1920px-Thanjavur_Brihadeeswarar_Temple.jpg",
-    "temple_tower": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Majestic_main_tower_big_temple_tanjore_tamilnadu_-_panoramio.jpg/1920px-Majestic_main_tower_big_temple_tanjore_tamilnadu_-_panoramio.jpg",
-    "temple_sunset": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/N-TN-C192_Brihadeeswarar_Temple_at_Sunset.jpg/1920px-N-TN-C192_Brihadeeswarar_Temple_at_Sunset.jpg",
-    "temple_wide": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/ThanjurTemple.jpg/1920px-ThanjurTemple.jpg"
+    "temple_dawn": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Thanjavur_Brihadeeswarar_Temple.jpg/1920px-Thanjavur_Brihadeeswarar_Temple.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "temple_tower": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Majestic_main_tower_big_temple_tanjore_tamilnadu_-_panoramio.jpg/1920px-Majestic_main_tower_big_temple_tanjore_tamilnadu_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "temple_sunset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/N-TN-C192_Brihadeeswarar_Temple_at_Sunset.jpg/1920px-N-TN-C192_Brihadeeswarar_Temple_at_Sunset.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "temple_wide": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/ThanjurTemple.jpg/1920px-ThanjurTemple.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   },
   "credits": [
     "Thanjavur Brihadeeswarar Temple - Kaami69, CC BY-SA 4.0, via Wikimedia Commons",
