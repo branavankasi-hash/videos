@@ -110,7 +110,12 @@ def host_references(ep, out):
     hosted = {}
     for name, url in refs.items():
         path = os.path.join(out, f"ref_{name}.jpg")
-        r = requests.get(url, headers=UA, timeout=60)
+        for attempt in range(5):
+            r = requests.get(url, headers=UA, timeout=60)
+            if r.ok:
+                break
+            print("reference", name, r.status_code, r.text[:200])
+            time.sleep(5 * (attempt + 1))
         r.raise_for_status()
         open(path, "wb").write(r.content)
         sh("gh", "release", "upload", tag, path, "--clobber")

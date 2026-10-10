@@ -41,7 +41,16 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           REDO_SHOTS: ${{ inputs.redo_shots }}
           SKIP_MUSIC: ${{ inputs.skip_music && '1' || '' }}
-        run: python pipeline/render_episode.py "${{ inputs.episode }}" out/ep
+        run: |
+          set -o pipefail
+          python -u pipeline/render_episode.py "${{ inputs.episode }}" out/ep 2>&1 | tee render.log
+      - name: Save log on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ID=$(python -c "import json;print(json.load(open('${{ inputs.episode }}'))['id'])")
+          gh release upload "work-$ID" render.log --clobber
       - name: Publish
         env:
           GH_TOKEN: ${{ github.token }}
