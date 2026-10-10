@@ -288,6 +288,12 @@ def main():
     else:
         os.replace(joined, final)
 
+    # YouTube-standard loudness (-14 LUFS)
+    loud = final.replace(".mp4", ".loud.mp4")
+    sh("ffmpeg", "-v", "error", "-y", "-i", final, "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-c:v", "copy",
+       "-c:a", "aac", "-b:a", "192k", loud)
+    os.replace(loud, final)
+
     desc = [ep["title"], "", "Sources and image credits:"] + [f"- {c}" for c in ep.get("credits", [])]
     desc += ["", "This video uses AI-generated visuals and narration based on documented history."]
     open(os.path.join(out, "youtube_description.txt"), "w").write("\n".join(desc))
