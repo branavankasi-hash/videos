@@ -1,0 +1,59 @@
+name: Compare video models
+
+on:
+  workflow_dispatch:
+    inputs:
+      scene:
+        description: "Scene file to render"
+        default: "scenes/rajaraja_test.json"
+      models:
+        description: "Comma list: veo,seedance,kling,narration"
+        default: "veo,seedance,kling,narration"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: video-render
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install tools
+        run: |
+          pip install requests
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-dejavu-core
+
+      - name: Generate clips
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ATLAS_API_KEY: ${{ secrets.ATLAS_API_KEY }}
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          MODELS: ${{ inputs.models }}
+        run: python pipeline/compare_models.py "${{ inputs.scene }}" out
+
+      - name: Build labelled comparison video
+        if: always()
+        continue-on-error: true
+        run: python pipeline/make_comparison.py out
+
+      - name: Publish as a release (watch on any device)
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ls -la out || exit 0
+          TAG="test-$(date -u +%Y%m%d-%H%M%S)"
+          NOTES="Scene: ${{ inputs.scene }}"$'\n\n'"\`\`\`json"$'\n'"$(cat out/results.json 2>/dev/null)"$'\n'"\`\`\`"
+          gh release create "$TAG" out/*.mp4 out/*.mp3 out/results.json \
+            --title "Model test - $(date -u +%Y-%m-%d)" --notes "$NOTES" --prerelease || \
+          gh release create "$TAG" out/* --title "Model test" --notes "$NOTES" --prerelease
