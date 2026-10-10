@@ -27,7 +27,9 @@
     "bronze_close": "https://github.com/branavankasi-hash/videos/releases/download/refs-ep01_stolen_king/still_bronze_close.png",
     "bronze_museum": "https://github.com/branavankasi-hash/videos/releases/download/refs-ep01_stolen_king/still_bronze_museum.png",
     "bronze_procession": "https://github.com/branavankasi-hash/videos/releases/download/refs-ep01_stolen_king/still_bronze_procession.png",
-    "thieves": "https://github.com/branavankasi-hash/videos/releases/download/refs-ep01_stolen_king/still_thieves.png"
+    "thieves": "https://github.com/branavankasi-hash/videos/releases/download/refs-ep01_stolen_king/still_thieves.png",
+    "construction": "https://github.com/branavankasi-hash/videos/releases/download/refs-ep01_stolen_king/still_construction.png",
+    "festival": "https://github.com/branavankasi-hash/videos/releases/download/refs-ep01_stolen_king/still_festival.png"
   },
   "credits": [
     "Thanjavur Brihadeeswarar Temple - Kaami69, CC BY-SA 4.0, via Wikimedia Commons",
@@ -75,8 +77,9 @@
     },
     {
       "id": "s07",
-      "prompt": "Around the year 1005, a vast construction site in Thanjavur: hundreds of Tamil workers with dark brown skin in simple white loincloths, and elephants, haul huge granite blocks on wooden rollers up a long earthen ramp toward a half-built temple: a single enormous pyramidal granite tower rising in tapering tiers directly over the shrine, wrapped in wooden scaffolding. Dust, heat haze, golden afternoon light. Wide crane shot. Sound: crowd shouting in Tamil, elephants trumpeting, ropes creaking.",
-      "narration": "Around the year 1003, he began his greatest project. A temple to Shiva in his capital, Thanjavur."
+      "prompt": "Workers strain on the ropes and the granite block slides forward on its rollers, elephants pull, dust rises, the camera cranes slowly up toward the unfinished tower. Keep the tower shape exactly as in the image. Sound: crowd shouting in Tamil, elephants trumpeting, ropes creaking.",
+      "narration": "Around the year 1003, he began his greatest project. A temple to Shiva in his capital, Thanjavur.",
+      "reference": "construction"
     },
     {
       "id": "s08",
@@ -102,9 +105,9 @@
     },
     {
       "id": "s12",
-      "prompt": "Golden evening light. Crowds of Tamil townspeople in traditional cotton clothing gather in the courtyard; Bharatanatyam dancers in silk perform, musicians play nadaswaram and drums, lamp lighters light rows of brass oil lamps. Slow gliding camera. Keep the architecture exactly as in the image. Sound: nadaswaram music, drums, crowd murmur.",
+      "prompt": "The dancers move gracefully, musicians play, lamp flames flicker, the crowd sways and claps. Slow gliding camera moving forward through the crowd. Keep the temple exactly as in the image. Sound: nadaswaram music, thavil drums, crowd murmur.",
       "narration": "An inscription on its walls names more than six hundred people who served here. Dancers, musicians, lamp lighters, tailors, accountants. This was not just a temple. It was a city inside a city.",
-      "reference": "temple_wide"
+      "reference": "festival"
     },
     {
       "id": "s13",
@@ -193,6 +196,20 @@
         "still:bronze_pair"
       ],
       "prompt": "Realistic cinematic film still, night in the 1960s inside a dim granite temple hall with massive carved pillars, one kerosene lantern on the floor. Two Tamil men with dark brown skin in white veshtis and half-sleeve cotton shirts, faces mostly in shadow, are lifting exactly the same bronze king statue from the reference image off its stone pedestal and wrapping it in old white cloth. Tense, quiet. No text."
+    },
+    "construction": {
+      "style_refs": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Brihadeeswarar_Temple_full.jpg/1920px-Brihadeeswarar_Temple_full.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Majestic_main_tower_big_temple_tanjore_tamilnadu_-_panoramio.jpg/1920px-Majestic_main_tower_big_temple_tanjore_tamilnadu_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      ],
+      "prompt": "Realistic cinematic film still, golden afternoon, around the year 1005 in Thanjavur. The exact temple tower from the reference photos - same pyramidal shape, same proportions, same carved tiers - but only the lower two-thirds is built so far, the top tiers missing, the unfinished upper part wrapped in wooden bamboo scaffolding. A long earthen ramp leads up to it. Hundreds of Tamil workers with dark brown skin in white loincloths and several elephants haul huge granite blocks on wooden rollers with coir ropes. Dust and heat haze, palm trees, no modern buildings, no lawns, no paved paths. No text."
+    },
+    "festival": {
+      "style_refs": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/ThanjurTemple.jpg/1920px-ThanjurTemple.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Brihadeeswarar_Temple_full.jpg/1920px-Brihadeeswarar_Temple_full.jpg"
+      ],
+      "prompt": "Realistic cinematic film still, warm evening dusk around the year 1011. The exact temple and courtyard from the reference photos - same tower shape, same cloister walls - but brand new, freshly carved light granite, no lawns, no modern paving, no tourists. The stone courtyard is full of Tamil townspeople with dark brown skin in traditional cotton veshtis and saris, Bharatanatyam dancers in silk performing in the foreground, musicians with nadaswaram and thavil drums, hundreds of brass oil lamps glowing in rows, flower garlands. No text."
     }
   }
 }
