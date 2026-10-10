@@ -1,0 +1,52 @@
+name: Render episode
+
+on:
+  workflow_dispatch:
+    inputs:
+      episode:
+        description: "Episode file"
+        default: "episodes/ep01_stolen_king.json"
+      redo_shots:
+        description: "Shots to regenerate (e.g. s05,s12). Leave empty to keep saved clips."
+        default: ""
+      skip_music:
+        description: "Skip the music bed"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: video-render
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install tools
+        run: |
+          pip install requests
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-dejavu-core
+      - name: Render
+        env:
+          ATLAS_API_KEY: ${{ secrets.ATLAS_API_KEY }}
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          GH_TOKEN: ${{ github.token }}
+          REDO_SHOTS: ${{ inputs.redo_shots }}
+          SKIP_MUSIC: ${{ inputs.skip_music && '1' || '' }}
+        run: python pipeline/render_episode.py "${{ inputs.episode }}" out/ep
+      - name: Publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ID=$(python -c "import json;print(json.load(open('${{ inputs.episode }}'))['id'])")
+          TAG="$ID-$(date -u +%Y%m%d-%H%M)"
+          gh release create "$TAG" out/ep/$ID.mp4 out/ep/$ID.srt out/ep/youtube_description.txt \
+            --title "$ID - $(date -u +%Y-%m-%d %H:%M)" --notes-file out/ep/youtube_description.txt --prerelease
