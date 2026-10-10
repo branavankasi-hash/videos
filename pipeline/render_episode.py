@@ -108,8 +108,10 @@ def host_references(ep, out):
         sh("gh", "release", "create", tag, "--title", f"Reference images {ep['id']}", "--notes", "Start frames",
            "--prerelease")
     hosted = {}
-    for name, url in refs.items():
-        path = os.path.join(out, f"ref_{name}.jpg")
+    for name, spec in refs.items():
+        url = spec["url"] if isinstance(spec, dict) else spec
+        ext = ".png" if url.split("?")[0].endswith(".png") else ".jpg"
+        path = os.path.join(out, f"ref_{name}{ext}")
         for attempt in range(5):
             r = requests.get(url, headers=UA, timeout=60)
             if r.ok:
@@ -118,8 +120,14 @@ def host_references(ep, out):
             time.sleep(5 * (attempt + 1))
         r.raise_for_status()
         open(path, "wb").write(r.content)
+        if isinstance(spec, dict) and spec.get("crop"):
+            cropped = os.path.join(out, f"ref_{name}_c.jpg")
+            sh("ffmpeg", "-v", "error", "-y", "-i", path, "-vf", f"crop={spec['crop']}", "-q:v", "2", cropped)
+            path, ext = cropped, ".jpg"
+            os.replace(cropped, os.path.join(out, f"ref_{name}.jpg"))
+            path = os.path.join(out, f"ref_{name}.jpg")
         sh("gh", "release", "upload", tag, path, "--clobber")
-        hosted[name] = f"https://github.com/{repo}/releases/download/{tag}/ref_{name}.jpg"
+        hosted[name] = f"https://github.com/{repo}/releases/download/{tag}/{os.path.basename(path)}"
     return hosted
 
 

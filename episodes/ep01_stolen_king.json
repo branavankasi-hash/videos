@@ -4,8 +4,8 @@
   "aspect_ratio": "16:9",
   "model": "kling",
   "voice_id": "JBFqnCBsd6RMkjVDRZzb",
-  "style": "Photorealistic historical documentary footage, shot on ARRI Alexa with anamorphic lenses, natural skin texture, real fabric movement, natural light, film grain, shallow depth of field. No text, no subtitles, no captions, no watermark.",
-  "negative_prompt": "cartoon, animation, 3d render, CGI look, plastic skin, extra fingers, deformed hands, distorted face, text, subtitles, watermark, logo, modern clothing in ancient scenes, gopuram gateway tower as main tower",
+  "style": "All people are Tamil South Indians with dark brown skin and typical Tamil facial features, dressed in traditional Tamil clothing for the period. Photorealistic historical documentary footage, shot on ARRI Alexa with anamorphic lenses, natural skin texture, real fabric movement, natural light, film grain, shallow depth of field. No text, no subtitles, no captions, no watermark.",
+  "negative_prompt": "cartoon, animation, 3d render, CGI look, plastic skin, extra fingers, deformed hands, distorted face, text, subtitles, watermark, logo, modern clothing in ancient scenes, gopuram gateway tower as main tower, European, Caucasian, white skin, East Asian features, Hindi or Devanagari script, gopuram as main tower",
   "characters": {
     "KING": "a regal Tamil king in his fifties with deep brown skin, a neatly trimmed grey-streaked moustache and long dark hair tied in a top knot, bare-chested, wearing layered gold necklaces, gold armlets and earrings, and a white silk veshti with a wide gold border",
     "YOUNG_KING": "a regal Tamil prince of about thirty-five with deep brown skin, a black moustache and long black hair tied in a top knot, bare-chested, wearing gold necklaces and armlets and a white silk veshti with a gold border",
@@ -17,19 +17,33 @@
     "temple_dawn": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Thanjavur_Brihadeeswarar_Temple.jpg/1920px-Thanjavur_Brihadeeswarar_Temple.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "temple_tower": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Majestic_main_tower_big_temple_tanjore_tamilnadu_-_panoramio.jpg/1920px-Majestic_main_tower_big_temple_tanjore_tamilnadu_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "temple_sunset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/N-TN-C192_Brihadeeswarar_Temple_at_Sunset.jpg/1920px-N-TN-C192_Brihadeeswarar_Temple_at_Sunset.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "temple_wide": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/ThanjurTemple.jpg/1920px-ThanjurTemple.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    "temple_wide": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/ThanjurTemple.jpg/1920px-ThanjurTemple.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "temple_full": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Brihadeeswarar_Temple_full.jpg/1920px-Brihadeeswarar_Temple_full.jpg",
+    "inscription": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/ANCIENT_TAMIL_SCRIPTURE.jpg/1920px-ANCIENT_TAMIL_SCRIPTURE.jpg",
+      "crop": "1700:956:0:0"
+    },
+    "bronze_pair": "https://github.com/branavankasi-hash/videos/releases/download/refs-ep01_stolen_king/still_bronze_pair.png",
+    "bronze_close": "https://github.com/branavankasi-hash/videos/releases/download/refs-ep01_stolen_king/still_bronze_close.png",
+    "bronze_museum": "https://github.com/branavankasi-hash/videos/releases/download/refs-ep01_stolen_king/still_bronze_museum.png",
+    "bronze_procession": "https://github.com/branavankasi-hash/videos/releases/download/refs-ep01_stolen_king/still_bronze_procession.png",
+    "thieves": "https://github.com/branavankasi-hash/videos/releases/download/refs-ep01_stolen_king/still_thieves.png"
   },
   "credits": [
     "Thanjavur Brihadeeswarar Temple - Kaami69, CC BY-SA 4.0, via Wikimedia Commons",
     "Majestic main tower, big temple, Tanjore - Panoramio user, CC BY 3.0, via Wikimedia Commons",
     "Brihadeeswarar Temple at Sunset - Madhuranthakan Jagadeesan, CC BY-SA 4.0, via Wikimedia Commons",
-    "ThanjurTemple - Praveenelayi, CC BY-SA 3.0, via Wikimedia Commons"
+    "ThanjurTemple - Praveenelayi, CC BY-SA 3.0, via Wikimedia Commons",
+    "Ancient Tamil inscription - Anand Rasane, CC BY-SA 3.0, via Wikimedia Commons",
+    "Brihadeeswarar Temple full - Haripadvishnu, CC BY-SA 4.0, via Wikimedia Commons",
+    "Bronze statues of Rajaraja and Lokamadevi shown are artistic recreations, not photographs of the recovered originals"
   ],
   "shots": [
     {
       "id": "s01",
-      "prompt": "Night, 1960s, inside a dim stone temple hall with massive carved granite pillars. A single kerosene lantern on the floor. Two men seen only from behind and in silhouette, faces hidden in shadow, carefully lift a small bronze statue off a stone pedestal and wrap it in old white cloth. Slow handheld push-in, tense, quiet. Sound: crickets, distant dog bark, cloth rustling.",
-      "narration": "Sometime in the 1960s, inside the greatest temple in South India, two small bronze statues quietly disappeared. No alarm. No police report. For almost fifty years, hardly anyone noticed."
+      "prompt": "The two men slowly lift the wrapped bronze statue and carry it away into the darkness between the pillars, lantern light flickering. Slow handheld push-in, tense. Keep the statue and the men exactly as in the image. Sound: crickets, distant dog bark, cloth rustling.",
+      "narration": "Sometime in the 1960s, inside the greatest temple in South India, two small bronze statues quietly disappeared. No alarm. No police report. For almost fifty years, hardly anyone noticed.",
+      "reference": "thieves"
     },
     {
       "id": "s02",
@@ -55,12 +69,13 @@
     },
     {
       "id": "s06",
-      "prompt": "Close-up of skilled stone engravers carving old Tamil script into a granite temple wall by oil-lamp light, chisels and mallets, stone dust floating in a beam of light, focused faces of the craftsmen. Sound: rhythmic tapping of chisels.",
-      "narration": "And unlike most rulers of his age, he made sure everything was written down. In stone."
+      "prompt": "A Tamil stone carver's dark brown hand holding an iron chisel and a wooden mallet enters the frame and gently taps along the bottom line of the inscription, small chips and stone dust falling, warm oil-lamp light. Keep the existing carved Tamil letters exactly unchanged; do not add new letters. Sound: rhythmic tapping of chisel on stone.",
+      "narration": "And unlike most rulers of his age, he made sure everything was written down. In stone.",
+      "reference": "inscription"
     },
     {
       "id": "s07",
-      "prompt": "Around the year 1005, a vast construction site in South India: hundreds of workers and elephants haul huge granite blocks on wooden rollers up a long earthen ramp toward a half-built pyramidal granite temple tower wrapped in wooden scaffolding. Dust, heat haze, golden afternoon light. Wide crane shot. Sound: crowd shouting, elephants trumpeting, ropes creaking.",
+      "prompt": "Around the year 1005, a vast construction site in Thanjavur: hundreds of Tamil workers with dark brown skin in simple white loincloths, and elephants, haul huge granite blocks on wooden rollers up a long earthen ramp toward a half-built temple: a single enormous pyramidal granite tower rising in tapering tiers directly over the shrine, wrapped in wooden scaffolding. Dust, heat haze, golden afternoon light. Wide crane shot. Sound: crowd shouting in Tamil, elephants trumpeting, ropes creaking.",
       "narration": "Around the year 1003, he began his greatest project. A temple to Shiva in his capital, Thanjavur."
     },
     {
@@ -76,18 +91,20 @@
     },
     {
       "id": "s10",
-      "prompt": "Around the year 1009, dozens of workers on top of a nearly finished pyramidal granite temple tower guide an enormous rounded octagonal stone dome into place with thick ropes and wooden levers, the city and green fields far below, dramatic sky. Aerial orbit shot. Sound: wind, men shouting commands, ropes straining.",
+      "prompt": "Around the year 1009, dozens of Tamil workers with dark brown skin, bare-chested in white loincloths, stand on top of a nearly finished pyramidal granite temple tower and guide an enormous rounded octagonal stone dome into place with thick coir ropes and wooden levers, green paddy fields and palm trees of Tamil Nadu far below, dramatic sky. Aerial orbit shot. Sound: wind, men shouting commands in Tamil, ropes straining.",
       "narration": "At the very top sits a massive domed stone. Exactly how it was lifted so high, a thousand years ago, is still debated today."
     },
     {
       "id": "s11",
-      "reuse": "https://github.com/branavankasi-hash/videos/releases/download/test-20261010-001958/3_kling30pro.mp4",
-      "narration": "In 1010, the temple was finished. The king named it Rajarajeswaram."
+      "narration": "In 1010, the temple was finished. The king named it Rajarajeswaram.",
+      "reference": "temple_full",
+      "prompt": "Morning. A long procession of Tamil priests and townspeople in white veshtis with flower garlands walks slowly across the stone courtyard toward the great tower, carrying brass lamps. Slow push-in. Keep the architecture exactly as in the image. Sound: nadaswaram, temple bells, footsteps."
     },
     {
       "id": "s12",
-      "prompt": "Evening in the year 1011 in the stone courtyard of {TEMPLE}: temple dancers in silk perform beside musicians playing nadaswaram and drums, lamp lighters fill rows of brass lamps, priests carry flowers, crowds of townspeople in simple cotton clothes watch. Warm lamp light, slow gliding camera through the crowd. Sound: nadaswaram music, drums, crowd murmur.",
-      "narration": "An inscription on its walls names more than six hundred people who served here. Dancers, musicians, lamp lighters, tailors, accountants. This was not just a temple. It was a city inside a city."
+      "prompt": "Golden evening light. Crowds of Tamil townspeople in traditional cotton clothing gather in the courtyard; Bharatanatyam dancers in silk perform, musicians play nadaswaram and drums, lamp lighters light rows of brass oil lamps. Slow gliding camera. Keep the architecture exactly as in the image. Sound: nadaswaram music, drums, crowd murmur.",
+      "narration": "An inscription on its walls names more than six hundred people who served here. Dancers, musicians, lamp lighters, tailors, accountants. This was not just a temple. It was a city inside a city.",
+      "reference": "temple_wide"
     },
     {
       "id": "s13",
@@ -96,13 +113,15 @@
     },
     {
       "id": "s14",
-      "prompt": "Inside a dim stone shrine lit only by small brass oil lamps, two antique bronze sculptures stand side by side on a carved stone pedestal: a standing man with a tall crown and his palms pressed together, and a slightly smaller standing woman with a tall crown in a graceful pose. Dark green-brown patina, strings of white jasmine flowers. Slow arc around the two sculptures, lamp flames reflecting on the metal. Sound: soft chanting, lamp flames.",
-      "narration": "Two of them were special. A bronze of Rajaraja himself, hands joined in prayer. And beside him, his queen, Lokamadevi. Each about seventy-five centimetres tall."
+      "prompt": "Very slow arc around the two bronze statues, oil lamp flames flickering and reflecting on the metal, a little incense smoke drifting. Keep both statues exactly as in the image. Sound: soft chanting, lamp flames.",
+      "narration": "Two of them were special. A bronze of Rajaraja himself, hands joined in prayer. And beside him, his queen, Lokamadevi. Each about seventy-five centimetres tall.",
+      "reference": "bronze_pair"
     },
     {
       "id": "s15",
-      "prompt": "Extreme close-up, very slow push-in on the serene face of {BRONZE_KING}, lamp light flickering across the patinated bronze, dust particles floating, shallow depth of field. Sound: a single soft bell, silence.",
-      "narration": "Historians believe these were made while the king was still alive. If that is true, this may be the closest we will ever get to seeing his face."
+      "prompt": "Extremely slow push-in on the bronze face, lamp light flickering across the patina, dust particles floating in the air. Keep the statue exactly as in the image. Sound: a single soft bell, then silence.",
+      "narration": "Historians believe these were made while the king was still alive. If that is true, this may be the closest we will ever get to seeing his face.",
+      "reference": "bronze_close"
     },
     {
       "id": "s16",
@@ -116,8 +135,9 @@
     },
     {
       "id": "s18",
-      "prompt": "A quiet, dim private museum gallery with dark wood and soft spotlights: {BRONZE_KING} displayed alone inside a glass case on a wooden plinth, nobody around. Slow dolly along the glass, reflections. Sound: air conditioning hum, silence.",
-      "narration": "Decades later, they were traced to Ahmedabad, in Gujarat. To a private museum collection. Together, they were valued at more than a hundred crore rupees."
+      "prompt": "Slow dolly along the glass case, soft reflections sliding across the glass. Keep the statue exactly as in the image. Sound: air conditioning hum, silence.",
+      "narration": "Decades later, they were traced to Ahmedabad, in Gujarat. To a private museum collection. Together, they were valued at more than a hundred crore rupees.",
+      "reference": "bronze_museum"
     },
     {
       "id": "s19",
@@ -131,8 +151,9 @@
     },
     {
       "id": "s21",
-      "prompt": "Daytime celebration on a street in Thanjavur: a joyful crowd showers flower petals on a decorated flower-covered palanquin carrying two antique bronze statues, nadaswaram players and drummers lead the procession, people with folded hands, some wiping tears. Modern Indian clothing. Slow tracking shot. Sound: nadaswaram, drums, cheering.",
-      "narration": "At the end of May 2018, Rajaraja and Lokamadevi returned to Tamil Nadu, and were taken home to Thanjavur. People lined the streets. Some of them wept."
+      "prompt": "The procession moves slowly forward, flower petals shower down, people cheer and some wipe tears, nadaswaram players lead. Slow tracking shot. Keep the statues exactly as in the image. Sound: nadaswaram, drums, cheering.",
+      "narration": "At the end of May 2018, Rajaraja and Lokamadevi returned to Tamil Nadu, and were taken home to Thanjavur. People lined the streets. Some of them wept.",
+      "reference": "bronze_procession"
     },
     {
       "id": "s22",
@@ -140,5 +161,38 @@
       "prompt": "Slow cinematic push-in toward the temple tower at sunset, the sky glowing orange and red, birds flying across, silhouettes of people walking in the courtyard. Keep the architecture exactly as in the image. Sound: evening bells, birds, wind.",
       "narration": "A thousand years after he built one of the greatest temples on earth, the king is back where he began. And yet, reports say the other bronzes from that same gift are still missing. Somewhere out there, the rest of this story is waiting."
     }
-  ]
+  ],
+  "stills": {
+    "bronze_pair": {
+      "style_refs": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Sundaramoorthinayanar_and_Paravai_Nachiyar_%28165%2C_166%29_%28Raja_Raja_Chola_Art_Gallery%29-WUS02842.jpg/1920px-Sundaramoorthinayanar_and_Paravai_Nachiyar_%28165%2C_166%29_%28Raja_Raja_Chola_Art_Gallery%29-WUS02842.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Rishabavaganadevar_%2886%29_%28Raja_Raja_Chola_Art_Gallery%29-WUS02846.jpg/1920px-Rishabavaganadevar_%2886%29_%28Raja_Raja_Chola_Art_Gallery%29-WUS02846.jpg"
+      ],
+      "prompt": "Realistic photograph. Two antique 11th-century Chola bronze sculptures from Tamil Nadu stand side by side on a carved granite pedestal inside a dim granite temple shrine lit by small brass oil lamps. Left: a standing Tamil king, about 75 cm tall, tall conical crown, long ear ornaments, broad shoulders, slender waist, both palms joined together in prayer at his chest, short draped lower garment with a looped waist sash. Right: his queen, slightly smaller, tall crown, graceful gently swaying standing pose, one arm hanging at her side. Dark green-brown patina with worn golden highlights, a jasmine garland at their feet. Match the casting style, face style, proportions and patina of the reference Chola bronzes. Calm, serene faces. No text, no labels, no glass, no modern objects."
+    },
+    "bronze_close": {
+      "style_refs": [
+        "still:bronze_pair"
+      ],
+      "prompt": "Realistic close-up photograph of the face, crown and upper chest of the bronze KING statue from the reference image, exactly the same statue, same face, same crown, same patina, palms joined in prayer visible at the bottom of the frame. Warm oil-lamp light from the side, dark background, shallow depth of field. No text."
+    },
+    "bronze_museum": {
+      "style_refs": [
+        "still:bronze_pair"
+      ],
+      "prompt": "Realistic photograph of exactly the same bronze king statue from the reference image, standing alone inside a glass display case on a dark wooden plinth in a quiet, dim private museum gallery with dark wood panelling and soft spotlights. Nobody present. No readable text."
+    },
+    "bronze_procession": {
+      "style_refs": [
+        "still:bronze_pair"
+      ],
+      "prompt": "Realistic news-style photograph, daytime, a street in Thanjavur, Tamil Nadu: exactly the same two bronze statues from the reference image ride on a palanquin decorated with marigold and jasmine flowers, carried through a joyful crowd of Tamil men and women in modern Indian clothing and veshtis, nadaswaram players in front, people with folded hands. No readable text, no signs."
+    },
+    "thieves": {
+      "style_refs": [
+        "still:bronze_pair"
+      ],
+      "prompt": "Realistic cinematic film still, night in the 1960s inside a dim granite temple hall with massive carved pillars, one kerosene lantern on the floor. Two Tamil men with dark brown skin in white veshtis and half-sleeve cotton shirts, faces mostly in shadow, are lifting exactly the same bronze king statue from the reference image off its stone pedestal and wrapping it in old white cloth. Tense, quiet. No text."
+    }
+  }
 }
